@@ -1,0 +1,193 @@
+:root {
+    --bg-page: #f7f7f7;
+    --bg-card: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #777777;
+    --text-muted: #888888;
+    --border-color: #dddddd;
+    --input-border: #d6d6d6;
+    --error-bg: #fff5f5;
+    --error-border: #e3bcbc;
+    --error-text: #9b2c2c;
+    --radius: 4px;
+}
+
+.new-ticket-page {
+    min-height: 100vh;
+    padding: 40px 48px;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.new-ticket-header {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.new-ticket-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.new-ticket-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+.new-ticket-header p {
+    margin: 8px 0 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.new-ticket-form {
+    max-width: 760px;
+    padding-top: 28px;
+}
+
+.new-ticket-section {
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.new-ticket-label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.new-ticket-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.new-ticket-field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.new-ticket-field input,
+.new-ticket-field textarea,
+.new-ticket-field select {
+    width: 100%;
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    color: #222222;
+    font: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.new-ticket-field input,
+.new-ticket-field select {
+    height: 40px;
+    padding: 0 12px;
+}
+
+/* Seta customizada apenas para elementos select */
+.new-ticket-field select {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #555 50%),
+        linear-gradient(135deg, #555 50%, transparent 50%);
+    background-position:
+        calc(100% - 16px) 18px,
+        calc(100% - 11px) 18px;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 34px;
+}
+
+.new-ticket-field textarea {
+    min-height: 150px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.new-ticket-field input:focus,
+.new-ticket-field textarea:focus,
+.new-ticket-field select:focus {
+    outline: none;
+    border-color: var(--text-primary);
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+/* --- GRID CORRIGIDO --- */
+.new-ticket-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+    /* Garante alinhamento pelo topo */
+}
+
+/* Remove margens extras dos campos dentro do grid para manter simetria */
+.new-ticket-grid .new-ticket-field {
+    margin-bottom: 0;
+}
+
+.new-ticket-error {
+    margin-bottom: 18px;
+    padding: 12px;
+    border: 1px solid var(--error-border);
+    border-radius: var(--radius);
+    background: var(--error-bg);
+    color: var(--error-text);
+    font-size: 13px;
+}
+
+.new-ticket-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.new-ticket-submit {
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid var(--text-primary);
+    border-radius: var(--radius);
+    background: var(--text-primary);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.new-ticket-submit:hover {
+    background: #2a2a2a;
+}
+
+.new-ticket-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+    .new-ticket-page {
+        padding: 28px 20px;
+    }
+
+    .new-ticket-grid {
+        grid-template-columns: 1fr;
+    }
+}
