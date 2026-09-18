@@ -6,12 +6,16 @@ import Tickets from "./pages/Tickets";
 import AppLayout from "./layouts/AppLayout";
 import TicketDetails from "./pages/TicketDetails";
 import NewTicket from "./pages/NewTicket";
+import Categories from "./pages/Categories";
+import Users from "./pages/Users";
 
 type Page =
   | "dashboard"
   | "tickets"
   | "ticket-details"
-  | "new-ticket";
+  | "new-ticket"
+  | "categories"
+  | "users";
 
 
 function App() {
@@ -48,7 +52,9 @@ function App() {
       
 
       {page === "dashboard" && <Dashboard />}
+      {page === "categories" && <Categories />}
 
+      {page === "users" && <Users />}
       {page === "new-ticket" && (
         <NewTicket
           onCreated={(ticketId) => {

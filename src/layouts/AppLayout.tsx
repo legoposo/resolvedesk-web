@@ -89,12 +89,20 @@ export default function AppLayout({
                             Novo chamado
                         </button>
 
-                        <button className="app-nav-item">
+                        <button
+                            className={`app-nav-item ${page === "categories" ? "active" : ""
+                                }`}
+                            onClick={() => onNavigate("categories")}
+                        >
                             Categorias
                         </button>
 
                         {user?.role === "ADMIN" && (
-                            <button className="app-nav-item">
+                            <button
+                                className={`app-nav-item ${page === "users" ? "active" : ""
+                                    }`}
+                                onClick={() => onNavigate("users")}
+                            >
                                 Usuários
                             </button>
                         )}

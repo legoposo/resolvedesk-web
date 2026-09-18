@@ -1,0 +1,138 @@
+.categories-page {
+    min-height: 100vh;
+    padding: 40px 48px;
+    background: #f7f7f7;
+    color: #111111;
+}
+
+.categories-header {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.categories-eyebrow,
+.categories-section-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #888888;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.categories-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 650;
+    letter-spacing: -0.04em;
+}
+
+.categories-header p {
+    margin: 8px 0 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+.category-form {
+    padding: 28px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.category-form-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 14px;
+    max-width: 760px;
+}
+
+.category-field {
+    display: grid;
+    gap: 8px;
+}
+
+.category-field label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.category-field input {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    background: white;
+    outline: none;
+}
+
+.category-field input:focus {
+    border-color: #111111;
+}
+
+.category-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.category-actions button {
+    height: 36px;
+    padding: 0 14px;
+    border: 1px solid #111111;
+    border-radius: 3px;
+    background: #111111;
+    color: white;
+    cursor: pointer;
+}
+
+.category-success {
+    color: #25653a;
+    font-size: 12px;
+}
+
+.category-error {
+    margin-top: 20px;
+    color: #9b2c2c;
+    font-size: 13px;
+}
+
+.categories-list {
+    margin-top: 28px;
+    max-width: 900px;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+
+.categories-list-header,
+.categories-list-row {
+    display: grid;
+    grid-template-columns: 80px 220px 1fr;
+}
+
+.categories-list-header {
+    min-height: 42px;
+    background: #f1f1f1;
+    color: #777777;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.categories-list-header>*,
+.categories-list-row>* {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.categories-list-row {
+    background: #ffffff;
+    font-size: 12px;
+}
+
+.categories-loading {
+    padding: 40px;
+}
